@@ -1,0 +1,34 @@
+@api = http://localhost:3000/products
+
+GET {{api}}
+
+###
+POST {{api}}
+Content-Type: application/json
+
+{
+    "name": "Monitor 2k",
+    "description": "IPS 1MS DISPLAYPORT",
+    "quantity": 15
+}
+
+###
+
+GET {{api}}/4
+
+###
+DELETE {{api}}/7
+
+### get total products
+
+GET {{api}}/count
+
+### update products
+PUT {{api}}/6
+Content-Type: application/json
+
+{
+    "name": "Nueva HP 8K",
+    "description": "La peor notebook que puedas comprar",
+    "quantity": 20
+}
